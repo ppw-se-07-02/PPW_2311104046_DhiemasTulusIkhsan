@@ -1,0 +1,104 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  background: #f4faf7;
+  color: #222;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #1b5e20, #66bb6a);
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+/* Navbar */
+nav {
+  background: #a5d6a7;
+  text-align: center;
+  padding: 0.5em;
+}
+nav a {
+  color: #0b3d0b;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Layout */
+.layout {
+  display: flex;
+  padding: 20px;
+}
+aside {
+  background: #e8f5e9;
+  padding: 15px;
+  border-radius: 5px;
+}
+.left {
+  width: 20%;
+  margin-right: 20px;
+}
+.right {
+  width: 20%;
+  margin-left: 20px;
+}
+.content {
+  flex: 1;
+  background: white;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background: #1b5e20;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: 20px;
+}
+
+/* ADMIN PAGE */
+.admin {
+  background: #0c1c0f;
+  color: #e8fce9;
+}
+.admin-layout {
+  display: flex;
+  min-height: 80vh;
+}
+.menu {
+  width: 220px;
+  background: #1a3b24;
+  padding: 1.5em;
+}
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+.menu a {
+  color: #9ef7b1;
+  text-decoration: none;
+  display: block;
+  margin: 10px 0;
+}
+.menu a:hover {
+  color: #fff;
+}
+.admin-content {
+  flex: 1;
+  padding: 1em;
+}
+iframe {
+  width: 100%;
+  height: 70vh;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
