@@ -1,0 +1,199 @@
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === BASE === */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0b0e0c;
+  color: #e4e8e2;
+  line-height: 1.7;
+}
+
+/* === HEADER === */
+header {
+  position: relative;
+  background: url("https://i.ibb.co/vwNymW9/wicked-banner.jpg") center/cover
+    no-repeat;
+  color: #d6f5d6;
+  text-align: center;
+  padding: 70px 20px 50px;
+  overflow: hidden;
+}
+
+header .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+header h1 {
+  position: relative;
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  z-index: 2;
+  background: linear-gradient(90deg, #00ff7f, #ff66cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+header h1:hover {
+  text-shadow: 0 0 25px #ffbdf2, 0 0 45px #67ffb4;
+  transition: 0.4s ease;
+}
+
+nav {
+  position: relative;
+  margin-top: 20px;
+  z-index: 2;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+}
+
+nav a {
+  color: #c6f6c6;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #73ff9a;
+}
+
+/* === MAIN LAYOUT === */
+main {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  gap: 30px;
+  padding: 40px 60px;
+}
+
+/* === SIDEBAR === */
+.sidebar {
+  background-color: #101512;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #1a3f26;
+}
+
+.sidebar h3 {
+  color: #6fff8a;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #203d2a;
+  padding-bottom: 5px;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.sidebar li {
+  margin: 8px 0;
+  color: #b5d6b5;
+  font-size: 0.95rem;
+}
+
+.poster {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #247a4b;
+  transition: transform 0.3s ease;
+}
+
+.poster:hover {
+  transform: scale(1.03);
+}
+
+/* === CONTENT === */
+.content {
+  background: linear-gradient(145deg, #0f1813, #14291c);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #264f34;
+  box-shadow: 0 0 20px rgba(0, 50, 20, 0.4);
+}
+
+.content h2 {
+  color: #8aff9c;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.content h3 {
+  color: #baf8ba;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.content ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.content p {
+  margin-bottom: 10px;
+}
+
+.trailer {
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(50, 255, 100, 0.3);
+}
+
+/* === PROMO === */
+.promo {
+  background-color: #101512;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #20482d;
+  text-align: center;
+}
+
+.promo h3 {
+  color: #baf8ba;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.promo-item {
+  background: linear-gradient(135deg, #14321e, #1f4c2e);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  color: #d9f9d9;
+  font-weight: 500;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.promo-item:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, #1b5a2d, #266d42);
+}
+
+/* === FOOTER === */
+footer {
+  background-color: #0c0f0c;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #9fbf9f;
+  border-top: 1px solid #203a26;
+}
