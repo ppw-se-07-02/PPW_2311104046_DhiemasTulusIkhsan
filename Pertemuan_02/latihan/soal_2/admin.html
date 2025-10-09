@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wicked Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h2 class="logo">Witch Admin</h2>
+      <nav>
+        <ul>
+          <li>
+            <a href="#" class="active" data-section="dashboard">Dashboard</a>
+          </li>
+          <li><a href="#" data-section="manage-users">Manage Users</a></li>
+          <li><a href="#" data-section="manage-movies">Manage Movies</a></li>
+          <li>
+            <a href="#" data-section="change-password">Change Password</a>
+          </li>
+          <li><a href="#" id="logout">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <header>
+        <h1>Welcome Back, Glinda 🌸</h1>
+        <p>Your magic keeps the Emerald City running.</p>
+      </header>
+
+      <!-- DASHBOARD -->
+      <section id="dashboard" class="content-section active">
+        <div class="dashboard-cards">
+          <div class="dash-card">
+            <h3>🧙 Articles</h3>
+            <p>14</p>
+          </div>
+          <div class="dash-card">
+            <h3>💬 Comments</h3>
+            <p>326</p>
+          </div>
+          <div class="dash-card">
+            <h3>🎬 Movies</h3>
+            <p>8</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MANAGE USERS -->
+      <section id="manage-users" class="content-section">
+        <h2>Manage Users</h2>
+        <p>View, edit, or remove registered users here ✨</p>
+        <ul class="post-list" id="user-list">
+          <li>👤 Elphaba <button class="delete-btn">Delete</button></li>
+          <li>👤 Dorothy <button class="delete-btn">Delete</button></li>
+        </ul>
+      </section>
+
+      <!-- MANAGE MOVIES -->
+      <section id="manage-movies" class="content-section">
+        <h2>Manage Movies</h2>
+        <p>Add or update magical film entries 🎥</p>
+        <form class="article-form">
+          <label>Movie Title</label>
+          <input
+            type="text"
+            id="article-title"
+            placeholder="Enter movie title..."
+            required
+          />
+          <label>Description</label>
+          <textarea
+            id="article-content"
+            rows="5"
+            placeholder="Enter description..."
+            required
+          ></textarea>
+          <button type="submit">Add Movie</button>
+        </form>
+        <ul class="post-list" id="post-list"></ul>
+      </section>
+
+      <!-- CHANGE PASSWORD -->
+      <section id="change-password" class="content-section">
+        <h2>Change Password</h2>
+        <form class="password-form">
+          <label>Current Password</label>
+          <input
+            type="password"
+            placeholder="Enter current password..."
+            required
+          />
+          <label>New Password</label>
+          <input type="password" placeholder="Enter new password..." required />
+          <button type="submit">Update Password</button>
+        </form>
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+        <p>© 2025 Wicked Admin Dashboard — crafted with 💖 by Glinda</p>
+      </footer>
+    </main>
+
+    <!-- LOGOUT POPUP -->
+    <div id="logout-popup" class="popup">
+      <div class="popup-content">
+        <h3>Are you sure you want to log out?</h3>
+        <div class="popup-buttons">
+          <button id="confirm-logout">Yes, Log Out</button>
+          <button id="cancel-logout">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
