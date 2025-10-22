@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TWICE - STRATEGY (Bootstrap)</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS - File Terpisah -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR menggunakan Bootstrap Navbar Component -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom sticky-top">
+      <div class="container-fluid px-lg-5">
+        <a class="navbar-brand" href="#">STRATEGY</a>
+
+        <!-- Hamburger Menu untuk Mobile -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation Links -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Member</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CAROUSEL BANNER menggunakan Bootstrap Carousel Component -->
+    <div
+      id="bannerCarousel"
+      class="carousel slide carousel-banner"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#bannerCarousel"
+          data-bs-slide-to="0"
+          class="active"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#bannerCarousel"
+          data-bs-slide-to="1"
+        ></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://pbs.twimg.com/media/Gu3KHqyWgAA0-H2?format=jpg&name=large"
+            class="d-block w-100"
+            alt="Slide 1"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://pbs.twimg.com/profile_banners/3129056526/1759374005/1500x500"
+            class="d-block w-100"
+            alt="Slide 2"
+          />
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#bannerCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#bannerCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- RECOMMEND SECTION menggunakan Bootstrap Grid System -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        <h2 class="section-title">✨ Recommended For You</h2>
+
+        <!-- Bootstrap Row & Col untuk Responsive Grid -->
+        <div class="row g-4">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="recommend-card">
+              <div class="img-container">
+                <img
+                  src="https://i.pinimg.com/736x/15/a0/a9/15a0a92bbd2685b36c374181197b7924.jpg"
+                  alt="Varsity Modern Blouse"
+                />
+              </div>
+              <p>Varsity Modern Blouse</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="recommend-card">
+              <div class="img-container">
+                <img
+                  src="https://i.pinimg.com/736x/1b/b9/ba/1bb9ba367eb464d1008ad11bd2c97cb2.jpg"
+                  alt="Blue Outfit Set"
+                />
+              </div>
+              <p>Blue Outfit Set</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="recommend-card">
+              <div class="img-container">
+                <img
+                  src="https://i.pinimg.com/1200x/88/3a/6f/883a6fad60350e363ea59ed445d45768.jpg"
+                  alt="Traditional Black Silk Shawl"
+                />
+              </div>
+              <p>Traditional Black Silk Shawl</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="recommend-card">
+              <div class="img-container">
+                <img
+                  src="https://i.pinimg.com/736x/f3/f4/5c/f3f45c49d89e14dc3b5eb4cccce39141.jpg"
+                  alt="Elegant Black Dress"
+                />
+              </div>
+              <p>Elegant Black Dress</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT GALLERY menggunakan Bootstrap Grid System -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        <!-- Bootstrap Row dengan Gutter untuk spacing -->
+        <div class="row g-4">
+          <!-- Product 1 -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="product-card">
+              <div class="img-container">
+                <img
+                  src="https://i.pinimg.com/736x/12/a5/f5/12a5f5e897eb1a43b365c385db317b78.jpg"
+                  alt="Purple Long Knit Cardigan"
+                />
+                <button class="fav-btn">♡</button>
+              </div>
+              <div class="product-info">
+                <h3>Purple Long Knit Cardigan | Nayeon – Twice</h3>
+                <p class="product-price">US$36.90</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="product-card">
+              <div class="img-container">
+                <img
+                  src="https://i.pinimg.com/736x/7a/12/ee/7a12ee7b1ec269d42e08fc4f42e4e615.jpg"
+                  alt="Colorful Caterpillar Plushie"
+                />
+                <span class="badge badge-new">NEW</span>
+                <button class="fav-btn">♡</button>
+              </div>
+              <div class="product-info">
+                <h3>Colorful Caterpillar Plushie | Chaeyoung - Twice</h3>
+                <p class="product-price">US$36.90</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="product-card">
+              <div class="img-container">
+                <img
+                  src="https://i.pinimg.com/736x/29/5e/be/295ebe6d714a704c4b171a169375efcb.jpg"
+                  alt="XGirl Black Tee"
+                />
+                <span class="badge badge-new">NEW</span>
+                <button class="fav-btn">♡</button>
+              </div>
+              <div class="product-info">
+                <h3>XGirl Black Tee | Tzuyu - Twice</h3>
+                <p class="product-price">US$36.90</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="product-card">
+              <div class="img-container">
+                <img
+                  src="https://i.pinimg.com/736x/53/c6/78/53c678a76b389ece294dcfded9bbfc19.jpg"
+                  alt="Shirt & Skirt Styling Dress"
+                />
+                <span class="badge badge-new">NEW</span>
+                <button class="fav-btn">♡</button>
+              </div>
+              <div class="product-info">
+                <h3>Shirt & Skirt Styling Dress | Momo - Twice</h3>
+                <p class="product-price">US$36.90</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="product-card">
+              <div class="img-container">
+                <img
+                  src="https://i.pinimg.com/736x/0d/06/04/0d0604a4b2c97b843f1a3632a39ec5ae.jpg"
+                  alt="Cat Star Patch Hoodie"
+                />
+                <span class="badge badge-new">NEW</span>
+                <button class="fav-btn">♡</button>
+              </div>
+              <div class="product-info">
+                <h3>Cat Star Patch Hoodie | Dahyun - Twice</h3>
+                <p class="product-price">US$36.90</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="product-card">
+              <div class="img-container">
+                <img
+                  src="https://i.pinimg.com/736x/33/90/ef/3390ef83e1fb16e694433852903dfa90.jpg"
+                  alt="Butterfly Navy Cardigan"
+                />
+                <span class="badge badge-new">NEW</span>
+                <button class="fav-btn">♡</button>
+              </div>
+              <div class="product-info">
+                <h3>Butterfly Navy Cardigan | Jeongyeon - Twice</h3>
+                <p class="product-price">US$36.90</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 7 -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="product-card">
+              <div class="img-container">
+                <img
+                  src="https://i.pinimg.com/736x/f6/6b/49/f66b493999e1159a02938f1eda91ef74.jpg"
+                  alt="Pink Star Patch Striped Shirt"
+                />
+                <span class="badge badge-new">NEW</span>
+                <button class="fav-btn">♡</button>
+              </div>
+              <div class="product-info">
+                <h3>Pink Star Patch Striped Shirt | Jihyo - Twice</h3>
+                <p class="product-price">US$36.90</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 8 -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="product-card">
+              <div class="img-container">
+                <img
+                  src="https://i.pinimg.com/736x/ce/bc/6d/cebc6d17ee4a515d2180d06d2d3ec4e7.jpg"
+                  alt="Blue Star Patch Striped Jeans"
+                />
+                <span class="badge badge-new">NEW</span>
+                <button class="fav-btn">♡</button>
+              </div>
+              <div class="product-info">
+                <h3>Blue Star Patch Striped Jeans | Sana - Twice</h3>
+                <p class="product-price">US$36.90</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER menggunakan Bootstrap Grid System -->
+    <footer class="footer-custom">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Footer Logo Column -->
+          <div class="col-12 col-md-4">
+            <h3>STRATEGY</h3>
+            <p>This is My Strategy, What is your Strategy?</p>
+          </div>
+
+          <!-- Quick Links Column -->
+          <div class="col-12 col-md-4">
+            <h4>Quick Links</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Social Media Column -->
+          <div class="col-12 col-md-4">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2025 STRATEGY | All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
