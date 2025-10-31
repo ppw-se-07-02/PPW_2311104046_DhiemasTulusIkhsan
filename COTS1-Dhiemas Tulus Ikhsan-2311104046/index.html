@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STRATEGY Store - Beranda</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+          <i class="bi bi-shop"></i> STRATEGY
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#produk">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi bi-cart3"></i> Cart
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Carousel Banner -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="0"
+          class="active"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="2"
+        ></button>
+      </div>
+      <div class="carousel-item active">
+        <div
+          class="hero-banner bg-gradient-1"
+          style="background-image: url('assets/img/carousel1.jpg')"
+        >
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6">
+                <h1 class="display-4 fw-bold text-white mb-3">
+                  New Strategy Collection
+                </h1>
+                <p class="lead text-white mb-4">
+                  Find your casual style with our collection of premium-quality
+                  t-shirts.
+                </p>
+                <a href="#produk" class="btn btn-light btn-lg">Shop Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div
+          class="hero-banner bg-gradient-2"
+          style="background-image: url('assets/img/carousel2.jpg')"
+        >
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6">
+                <h1 class="display-4 fw-bold text-white mb-3">
+                  Discount Up To 30%
+                </h1>
+                <p class="lead text-white mb-4">
+                  Special promo for all selected t-shirt collections.
+                </p>
+                <a href="#produk" class="btn btn-pink btn-lg">View Promo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div
+          class="hero-banner bg-gradient-3"
+          style="background-image: url('assets/img/carousel3.jpg')"
+        >
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6">
+                <h1 class="display-4 fw-bold text-white mb-3">
+                  Comfortable & Stylish
+                </h1>
+                <p class="lead text-white mb-4">
+                  Premium cotton material for maximum comfort.
+                </p>
+                <a href="#produk" class="btn btn-outline-light btn-lg"
+                  >Explore</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container my-5" id="produk">
+      <h2 class="text-center mb-4 fw-bold">On Everyone's Wishlist</h2>
+
+      <!-- Form Pencarian -->
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-6 col-md-8">
+          <div class="input-group">
+            <span class="input-group-text bg-white">
+              <i class="bi bi-search"></i>
+            </span>
+            <input
+              type="text"
+              id="searchInput"
+              class="form-control"
+              placeholder="Search..."
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Card Grid -->
+      <div class="row g-4" id="productList">
+        <!-- Card Produk 1 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100">
+            <img
+              src="assets/img/product1.jpg"
+              class="card-img-top"
+              alt="Cozy Plush Robe"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title mb-2">Cozy Plush Robe</h5>
+              <p class="card-text text-primary fw-bold mb-3">$69.95</p>
+              <a href="detail.html" class="btn btn-primary w-100 mb-2">
+                Detail
+              </a>
+              <button class="btn btn-outline-success w-100 add-to-cart">
+                <i class="bi bi-cart-plus"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Produk 2 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100">
+            <img
+              src="assets/img/product2.jpg"
+              class="card-img-top"
+              alt="T-Shirt Vintage"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title mb-2">Flannel Long Set</h5>
+              <p class="card-text text-primary fw-bold mb-3">$55.95</p>
+              <a href="detail.html" class="btn btn-primary w-100 mb-2">
+                Detail
+              </a>
+              <button class="btn btn-outline-success w-100 add-to-cart">
+                <i class="bi bi-cart-plus"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Produk 3 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100">
+            <img
+              src="assets/img/product3.jpg"
+              class="card-img-top"
+              alt="T-Shirt Oversize"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title mb-2">Satin Short Robe</h5>
+              <p class="card-text text-primary fw-bold mb-3">$59.95</p>
+              <a href="detail.html" class="btn btn-primary w-100 mb-2">
+                Detail
+              </a>
+              <button class="btn btn-outline-success w-100 add-to-cart">
+                <i class="bi bi-cart-plus"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Produk 4 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100">
+            <img
+              src="assets/img/product4.jpg"
+              class="card-img-top"
+              alt="T-Shirt Minimalist"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title mb-2">Unlined Lace</h5>
+              <p class="card-text text-primary fw-bold mb-3">$45.95</p>
+              <a href="detail.html" class="btn btn-primary w-100 mb-2">
+                Detail
+              </a>
+              <button class="btn btn-outline-success w-100 add-to-cart">
+                <i class="bi bi-cart-plus"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Produk 5 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100">
+            <img
+              src="assets/img/product5.jpg"
+              class="card-img-top"
+              alt="T-Shirt Street"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title mb-2">Bombshell Style Shirt</h5>
+              <p class="card-text text-primary fw-bold mb-3">$55.95</p>
+              <a href="detail.html" class="btn btn-primary w-100 mb-2">
+                Detail
+              </a>
+              <button class="btn btn-outline-success w-100 add-to-cart">
+                <i class="bi bi-cart-plus"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Produk 6 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100">
+            <img
+              src="assets/img/product6.jpg"
+              class="card-img-top"
+              alt="T-Shirt Sport"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title mb-2">Defined Scuba</h5>
+              <p class="card-text text-primary fw-bold mb-3">$89.95</p>
+              <a href="detail.html" class="btn btn-primary w-100 mb-2">
+                Detail
+              </a>
+              <button class="btn btn-outline-success w-100 add-to-cart">
+                <i class="bi bi-cart-plus"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rekomendasi Produk -->
+      <div class="mt-5">
+        <h3 class="mb-4 fw-bold">Recommendation</h3>
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="card rekomendasi-card">
+              <div class="row g-0">
+                <div class="col-4">
+                  <img
+                    src="assets/img/product1.jpg"
+                    class="img-fluid rounded-start h-100"
+                    alt="Rekomendasi 1"
+                    style="object-fit: cover"
+                  />
+                </div>
+                <div class="col-8">
+                  <div class="card-body p-3">
+                    <h6 class="card-title mb-1">Cozy Plush Robe</h6>
+                    <p class="text-primary fw-bold mb-2">$69.95</p>
+                    <a
+                      href="detail.html"
+                      class="btn btn-sm btn-outline-primary"
+                    >
+                      Detail
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card rekomendasi-card">
+              <div class="row g-0">
+                <div class="col-4">
+                  <img
+                    src="assets/img/product3.jpg"
+                    class="img-fluid rounded-start h-100"
+                    alt="Rekomendasi 2"
+                    style="object-fit: cover"
+                  />
+                </div>
+                <div class="col-8">
+                  <div class="card-body p-3">
+                    <h6 class="card-title mb-1">Satin Short Robe</h6>
+                    <p class="text-primary fw-bold mb-2">$59.95</p>
+                    <a
+                      href="detail.html"
+                      class="btn btn-sm btn-outline-primary"
+                    >
+                      Lihat Detail
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card rekomendasi-card">
+              <div class="row g-0">
+                <div class="col-4">
+                  <img
+                    src="assets/img/product4.jpg"
+                    class="img-fluid rounded-start h-100"
+                    alt="Rekomendasi 3"
+                    style="object-fit: cover"
+                  />
+                </div>
+                <div class="col-8">
+                  <div class="card-body p-3">
+                    <h6 class="card-title mb-1">Unlined Lace</h6>
+                    <p class="text-primary fw-bold mb-2">$45.95</p>
+                    <a
+                      href="detail.html"
+                      class="btn btn-sm btn-outline-primary"
+                    >
+                      Lihat Detail
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <div class="container">
+        <p class="mb-1">&copy; 2025 COTS Store. All Rights Reserved.</p>
+        <p class="mb-0 small">By Dhiemas Tulus Ikhsan - 2311104046</p>
+      </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="position-fixed top-0 end-0 p-3" style="z-index: 1055">
+      <div
+        id="cartToast"
+        class="toast align-items-center text-bg-success border-0"
+        role="alert"
+      >
+        <div class="d-flex">
+          <div class="toast-body">
+            <i class="bi bi-check-circle-fill me-2"></i>
+            <span id="toastMessage"
+              >Produk berhasil ditambahkan ke keranjang!</span
+            >
+          </div>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,364 @@
+/* ======== GLOBAL STYLE ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff7fa;
+  color: #4a3a3a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* ======== NAVBAR ======== */
+.navbar {
+  background-color: #ffe5f1;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  color: #e85aad !important;
+  transition: color 0.3s;
+}
+
+.navbar-brand:hover {
+  color: #ff85c1 !important;
+}
+
+/* ======== HERO CAROUSEL ======== */
+.hero-banner {
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 80px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+/* overlay pink lembut biar teks tetap kebaca */
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 133, 193, 0.35);
+  z-index: 0;
+  backdrop-filter: brightness(0.9);
+}
+
+.hero-banner .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-banner h1 {
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.hero-banner p {
+  color: #fffafc;
+}
+
+.hero-banner a.btn {
+  background-color: #ff85c1;
+  border: 2px solid #ff85c1;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.hero-banner a.btn:hover {
+  background-color: #e85aad;
+  border-color: #e85aad;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 24px 24px;
+  filter: invert(96%) sepia(8%) saturate(350%) hue-rotate(290deg)
+    brightness(103%) contrast(95%);
+}
+
+/* ======== FORM SEARCH ======== */
+.input-group-text {
+  border-right: none;
+  background-color: #ffe5f1;
+  color: #b84f8e;
+}
+
+#searchInput {
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+  padding: 0.6rem 1rem;
+  transition: all 0.3s;
+  border-color: #f5cfe0;
+}
+
+#searchInput:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 133, 193, 0.25);
+  border-color: #ff85c1;
+}
+
+/* ======== CARD PRODUK ======== */
+.product-card {
+  border: 1px solid #f7cfe3;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(255, 133, 193, 0.25);
+}
+
+.product-card img {
+  height: 260px;
+  object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.product-card .card-body {
+  padding: 1rem;
+}
+
+.product-card .card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #e85aad;
+}
+
+.product-card .card-text {
+  font-size: 0.9rem;
+  color: #9e5b85;
+}
+
+/* 💰 Harga produk */
+.product-card .price {
+  color: #ff85c1;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Tombol */
+.product-card .btn {
+  font-size: 0.85rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Detail (Full Pink) */
+.product-card .btn-outline-primary {
+  background-color: #ff85c1;
+  border: 2px solid #ff85c1;
+  color: #fff;
+}
+
+.product-card .btn-outline-primary:hover {
+  background-color: #e85aad;
+  border-color: #e85aad;
+}
+
+/* Add to Cart (Outline Pink) */
+.product-card .btn-outline-secondary {
+  background-color: transparent;
+  border: 2px solid #ff85c1;
+  color: #ff85c1;
+}
+
+.product-card .btn-outline-secondary:hover {
+  background-color: #ff85c1;
+  color: white;
+  border-color: #ff85c1;
+}
+
+.product-card .badge {
+  font-size: 0.75rem;
+  padding: 0.35rem 0.6rem;
+  background-color: #ffe0ec;
+  color: #b84f8e;
+}
+
+/* ======== DETAIL PAGE ======== */
+.carousel-item img {
+  border-radius: 12px;
+  height: 450px;
+  object-fit: cover;
+}
+
+.thumbnail-img {
+  cursor: pointer;
+  transition: all 0.3s;
+  height: 80px;
+  object-fit: cover;
+}
+
+.thumbnail-img:hover {
+  opacity: 0.85;
+  border-color: #ff85c1;
+}
+
+.product-detail-info h2 {
+  font-size: 1.8rem;
+  color: #e85aad;
+}
+
+.product-detail-info h3 {
+  font-size: 1.6rem;
+  color: #ff85c1;
+}
+
+.product-detail-info p {
+  color: #6d4865;
+}
+
+/* tombol di detail */
+.btn-outline-secondary:hover {
+  background-color: #ff85c1;
+  color: white;
+}
+
+.btn-check:checked + .btn-outline-secondary {
+  background-color: #ff85c1;
+  border-color: #ff85c1;
+  color: white;
+}
+
+/* ======== REKOMENDASI CARD ======== */
+.rekomendasi-card {
+  border: 1px solid #f5cfe0;
+  border-radius: 10px;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.rekomendasi-card:hover {
+  box-shadow: 0 4px 12px rgba(255, 133, 193, 0.25);
+  transform: translateY(-3px);
+}
+
+.rekomendasi-card img {
+  max-height: 120px;
+}
+
+.rekomendasi-card .card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #e85aad;
+}
+
+/* ======== BREADCRUMB ======== */
+.breadcrumb {
+  background: transparent;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+  color: #ff85c1;
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+
+/* ======== FOOTER ======== */
+footer {
+  margin-top: auto;
+  background-color: #ffe5f1;
+  color: #b84f8e;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  padding: 12px 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* ======== TOAST NOTIFICATION ======== */
+.toast {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(255, 133, 193, 0.25);
+  background-color: #ff85c1;
+  color: white;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  .hero-banner {
+    min-height: 300px;
+    padding: 50px 0;
+  }
+
+  .hero-banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-banner .lead {
+    font-size: 1rem;
+  }
+
+  .product-card img {
+    height: 180px;
+  }
+
+  .carousel-item img {
+    height: 300px;
+  }
+
+  .product-detail-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .product-detail-info h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* ======== ANIMATION ======== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* ======== UTILITY ======== */
+.cursor-pointer {
+  cursor: pointer;
+}
