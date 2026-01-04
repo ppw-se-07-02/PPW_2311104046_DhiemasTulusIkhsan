@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas 4 - jQuery Interactive</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f9;
+      padding-top: 50px;
+    }
+    #kotak {
+      width: 120px;
+      height: 120px;
+      background-color: #e74c3c; /* Warna merah cerah */
+      margin: 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s; /* Smooth transition untuk hover */
+    }
+    .btn-container {
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+      transition: 0.2s;
+    }
+    #btn-aksi { background-color: #2ecc71; } /* Hijau */
+    #btn-reset { background-color: #3498db; } /* Biru */
+    button:hover { opacity: 0.8; }
+  </style>
+</head>
+<body>
+
+  <h2>Manipulasi Kotak dengan jQuery</h2>
+  
+  <div id="kotak"></div>
+
+  <div class="btn-container">
+    <button id="btn-aksi">Mulai Animasi</button>
+    <button id="btn-reset">Reset Kondisi</button>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      
+      // Aksi 1: Animasi Berantai (Chaining)
+      $("#btn-aksi").click(function(){
+        $("#kotak")
+          .fadeOut(500)
+          .fadeIn(500)
+          .animate({ width: '200px', opacity: '0.5' }, "slow")
+          .css("background-color", "#9b59b6") // Berubah jadi ungu
+          .slideUp(500)
+          .slideDown(500);
+      });
+
+      // Aksi 2: Mengembalikan ke bentuk semula
+      $("#btn-reset").click(function(){
+        $("#kotak").stop(true).css({
+          "width": "120px",
+          "height": "120px",
+          "background-color": "#e74c3c",
+          "opacity": "1",
+          "display": "block"
+        });
+      });
+
+    });
+  </script>
+</body>
+</html>

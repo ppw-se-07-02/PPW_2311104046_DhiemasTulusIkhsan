@@ -1,0 +1,89 @@
+<!-- <html>
+
+<head>
+    <title>The jQuery Example</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            // $("body").append("<p>Hello World<p>");
+            // var hobi = ["Membaca", "Bersepeda", "Tidur"];
+            // $("#hasil").text("Hobi Favorit: " + hobi[1]);
+
+
+            // var a = 10;
+            // var b = 5;
+            // var hasil = a + b;
+            // $("#output").html("Hasil Penjumlahan: " + hasil)
+
+
+            var nilai = 75;
+            if (nilai >= 70) {
+                $("#hasil").text("Selamat, Anda Lulus.");
+                $("#hasil").css("color", "green");
+            }
+
+            else {
+                $("#hasil").text("Maaf, Anda Tidak Lulus.");
+                $("#hasil").css("color", "red");
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div id="hasil"> </div>
+</body> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $("p").hide();
+            });
+            $("#show").click(function () {
+                $("p").show();
+            });
+        }); 
+    </script>
+</head>
+
+<body>
+
+    <p>If you click on the "Hide" button, I will disappear.</p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+
+</body> -->
+
+
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("div").anim
+                ate({
+                    height: 'toggle'
+                });
+            });
+        }); 
+    </script>
+</head>
+
+<body>
+
+    <p>Click the button multiple times to toggle the animation.</p>
+    <p>By default, all HTML elements have a static position, and cannot be moved.To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+    <div style="background:#98bf21; height:100px; width:100px; position:absolute;"></div>
+</body>
+
+</html>

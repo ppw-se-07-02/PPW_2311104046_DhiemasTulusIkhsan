@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas 3 - jQuery Interaktif</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      margin-top: 100px;
+      background-color: #f0f2f5;
+    }
+    #box-status {
+      display: inline-block;
+      padding: 20px;
+      border: 2px dashed #ccc;
+      border-radius: 10px;
+      background: white;
+    }
+    button {
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      background-color: #55acee;
+      color: white;
+      box-shadow: 0 4px #3b88c3;
+    }
+    button:active {
+      box-shadow: 0 0 #3b88c3;
+      transform: translateY(4px);
+    }
+    p {
+      font-size: 20px;
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="box-status">
+    <button id="tombol">Ganti Status</button>
+    <p id="pesan">Status saat ini: <b>Nonaktif</b></p>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      $("#tombol").click(function(){
+        // Menggunakan variabel untuk mengecek status teks
+        let teksSekarang = $("#pesan b").text();
+
+        if (teksSekarang === "Nonaktif") {
+          $("#pesan").html("Status saat ini: <b style='color: green;'>Aktif!</b>");
+          $(this).text("Matikan");
+        } else {
+          $("#pesan").html("Status saat ini: <b style='color: red;'>Nonaktif</b>");
+          $(this).text("Ganti Status");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas 1 - Kasir Digital</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      margin: 40px;
+    }
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    table {
+      border-collapse: collapse;
+      width: 60%;
+      margin: 20px auto;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    th {
+      background-color: #27ae60; /* Warna hijau biar beda */
+      color: white;
+      padding: 12px;
+    }
+    td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+    #total {
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+      color: #27ae60;
+      display: none;
+      padding: 15px;
+      border: 2px solid #27ae60;
+      width: fit-content;
+      margin: 20px auto;
+      border-radius: 8px;
+    }
+    #btn-hitung {
+      display: block;
+      margin: 20px auto;
+      padding: 12px 25px;
+      background-color: #2ecc71;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    #btn-hitung:hover {
+      background-color: #27ae60;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Ringkasan Belanja Perlengkapan Kantor</h2>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Nama Produk</th>
+        <th>Harga Per Unit</th>
+        <th>Kuantitas</th>
+        <th>Subtotal</th>
+      </tr>
+    </thead>
+    <tbody id="daftar-barang"></tbody>
+  </table>
+
+  <button id="btn-hitung">Lihat Total Bayar</button>
+  <p id="total"></p>
+
+  <script>
+    // --- DAFTAR BARANG YANG SUDAH DIUBAH ---
+    const barang = [
+      { nama: "Kertas A4 80gr", harga: 55000, jumlah: 5 },
+      { nama: "Tinta Printer Black", harga: 125000, jumlah: 2 },
+      { nama: "Flashdisk 64GB", harga: 85000, jumlah: 4 },
+      { nama: "Map Folder (Pack)", harga: 45000, jumlah: 3 },
+      { nama: "Stapler Heavy Duty", harga: 75000, jumlah: 1 }
+    ];
+
+    const tbody = document.getElementById("daftar-barang");
+    
+    // Tampilkan data barang ke tabel
+    barang.forEach(item => {
+      const subtotal = item.harga * item.jumlah;
+      tbody.innerHTML += `
+        <tr>
+          <td>${item.nama}</td>
+          <td>Rp ${item.harga.toLocaleString('id-ID')}</td>
+          <td>${item.jumlah}</td>
+          <td>Rp ${subtotal.toLocaleString('id-ID')}</td>
+        </tr>
+      `;
+    });
+
+    // Event listener untuk tombol
+    document.getElementById("btn-hitung").addEventListener("click", function(){
+      let totalHarga = 0;
+      barang.forEach(item => {
+        totalHarga += item.harga * item.jumlah;
+      });
+
+      const totalElem = document.getElementById("total");
+      totalElem.innerHTML = `Total Keseluruhan: Rp ${totalHarga.toLocaleString('id-ID')}`;
+      totalElem.style.display = "block";
+      
+      // Opsional: Sembunyikan tombol setelah diklik agar lebih rapi
+      this.style.display = "none"; 
+    });
+  </script>
+</body>
+</html>
